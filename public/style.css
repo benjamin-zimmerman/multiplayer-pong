@@ -2,7 +2,7 @@ body {
 	overflow: hidden;
 	margin: 0;
 	background: black;
-	color: white;
+	color: red;
 	font-family: 'Courier New', Courier, monospace;
 	touch-action: none;
 	width: 100%;
@@ -54,8 +54,8 @@ h2 {
 
 #input-username[type='text'] {
 	background-color: black;
-	border: 5px solid white;
-	color: white;
+	border: 5px solid green;
+	color: green;
 	text-align: center;
 	font-size: 32px;
 	width: 460px;
@@ -76,7 +76,7 @@ h2 {
 
 .menu-button:hover {
 	cursor: pointer;
-	background-color: white;
+	background-color: red;
 	color: black;
 }
 
