@@ -68,8 +68,8 @@ h2 {
 	padding: 10px 20px;
 	width:500px;
 	border-radius: 20px;
-	background-color: black;
-	color: white;
+	background-color: green;
+	color: red;
 	border: 3px solid white;
 	transition-duration: 0.3s;
 }
