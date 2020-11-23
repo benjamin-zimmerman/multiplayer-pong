@@ -18,21 +18,22 @@ class Game {
 		this.ball = [20, 50];
 		this.ball_velocity = [MIN_SPEED, 0];
 	}
-
-	//if (
-	//	this.ball[1] < this.players[this.player2].pos + 10 &&
-	//	this.ball[1] + 2 > this.players[this.player2].pos - 10 &&
-	//	this.ball[0] > 94 &&
-	//	this.ball[0] < 98
-	//	) {play_boing();
-	//	  } else if (
-	//		this.ball[1] < this.players[this.player1].pos + 10 &&
-	//		this.ball[1] + 2 > this.players[this.player1].pos - 10 &&
-	//		this.ball[0] < 6 &&
-	//		this.ball[0] > 2
-	//	) {play_boing();
-	//	  }
 	
+	update_sound() {
+	if (
+		this.ball[1] < this.players[this.player2].pos + 10 &&
+		this.ball[1] + 2 > this.players[this.player2].pos - 10 &&
+		this.ball[0] > 94 &&
+		this.ball[0] < 98
+	) {play_boing();
+	  } else if (
+		this.ball[1] < this.players[this.player1].pos + 10 &&
+		this.ball[1] + 2 > this.players[this.player1].pos - 10 &&
+		this.ball[0] < 6 &&
+		this.ball[0] > 2
+	    ) {play_boing();
+		}
+	}
 	
 	
 	//Updates game_state and calculates ball position and velocity
