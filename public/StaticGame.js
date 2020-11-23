@@ -33,6 +33,7 @@ class Game {
 		this.ball[0] > 2
 	    ) {play_boing();
 		}
+	this.update();
 	}
 	
 	
@@ -98,8 +99,6 @@ class Game {
 				(MAX_SPEED - MIN_SPEED) +
 				MIN_SPEED;
 			this.ball_velocity[1] = -normalizedRelativeIntersectionY;
-			audio.addEventListener("canplaythrough", function() {audio.play(); })
-			play_boing();
 		}
 	}
 
