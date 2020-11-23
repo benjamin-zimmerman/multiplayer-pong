@@ -1,6 +1,7 @@
 const MAX_SPEED = 1.5;
 const MIN_SPEED = 1;
 const MAX_SCORE = 10;
+var audio = new Audio("https://raw.githubusercontent.com/benjamin-zimmerman/multiplayer-pong/dev/public/boing.mp3");
 //const boingSOUND = document.getElementbyID("boing");
 
 class Game {
@@ -57,12 +58,7 @@ class Game {
 				MIN_SPEED
 			);
 			this.ball_velocity[1] = -normalizedRelativeIntersectionY;
-			document.getElementbyID("boing").play();
-			var audio = new Audio("boing.mp3");
-			audio.play();
-			var audio2 = new Audio("https://raw.githubusercontent.com/benjamin-zimmerman/multiplayer-pong/dev/public/boing.mp3");
-			//function() { audio2.play(); }
-			audio2.addEventListener("canplaythrough", function() {audio2.play(); })
+			audio.addEventListener("canplaythrough", function() {audio.play(); })
 			
 		} else if (
 			this.ball[1] < this.players[this.player1].pos + 10 &&
@@ -80,10 +76,7 @@ class Game {
 				(MAX_SPEED - MIN_SPEED) +
 				MIN_SPEED;
 			this.ball_velocity[1] = -normalizedRelativeIntersectionY;
-			document.getElementbyID("boing").play();
-			var audio2 = new Audio("https://raw.githubusercontent.com/benjamin-zimmerman/multiplayer-pong/dev/public/boing.mp3");
-			//function() { audio2.play(); }
-			audio2.addEventListener("canplaythrough", function() {audio2.play(); })
+			audio.addEventListener("canplaythrough", function() {audio.play(); })
 		}
 	}
 
