@@ -74,7 +74,7 @@ class Game {
 				(MAX_SPEED - MIN_SPEED) +
 				MIN_SPEED;
 			this.ball_velocity[1] = -normalizedRelativeIntersectionY;
-			//Add in sound
+			document.getElementbyID("boing").play();
 		}
 	}
 
