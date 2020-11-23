@@ -60,7 +60,7 @@ class Game {
 			document.getElementbyID("boing").play();
 			var audio = new Audio("boing.mp3");
 			audio.play();
-			var audio2 = new Audio('https://raw.githubusercontent.com/benjamin-zimmerman/multiplayer-pong/dev/public/boing.mp3');
+			var audio2 = new Audio("https://raw.githubusercontent.com/benjamin-zimmerman/multiplayer-pong/dev/public/boing.mp3");
 			audio2.play();
 			
 		} else if (
