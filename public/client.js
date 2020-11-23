@@ -119,7 +119,7 @@ function singlePlayer() {
 		//update() now inside update_sound()
 		//game_state.update();
 		//game.update();
-		game_state.update_sound();
+		game_state.update();
 		game.update_sound();
 		game_state.game.self.score = game.players[0].score;
 		game.players[0].pos = game_state.game.self.pos
