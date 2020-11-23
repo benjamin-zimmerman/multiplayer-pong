@@ -137,13 +137,13 @@ function singlePlayer() {
 		game.ball[1] + 2 > game.players[game.player2].pos - 10 &&
 		game.ball[0] > 94 &&
 		game.ball[0] < 98
-	) {game.sound1.play();
+	) {game.audio1.play();
 	  } else if (
 		game.ball[1] < game.players[game.player1].pos + 10 &&
 		game.ball[1] + 2 > game.players[game.player1].pos - 10 &&
 		game.ball[0] < 6 &&
 		game.ball[0] > 2
-	    ) {game.sound1.play();
+	    ) {game.audio1.play();
 		}
 	
 	
