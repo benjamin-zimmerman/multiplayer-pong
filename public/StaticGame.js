@@ -1,6 +1,7 @@
 const MAX_SPEED = 1.5;
 const MIN_SPEED = 1;
 const MAX_SCORE = 10;
+const boingSOUND = document.getElementbyID("boing");
 
 class Game {
 	constructor(id, username, id2, username2) {
@@ -56,7 +57,7 @@ class Game {
 				MIN_SPEED
 			);
 			this.ball_velocity[1] = -normalizedRelativeIntersectionY;
-			//Add in sound
+			boingSOUND.play();
 		} else if (
 			this.ball[1] < this.players[this.player1].pos + 10 &&
 			this.ball[1] + 2 > this.players[this.player1].pos - 10 &&
