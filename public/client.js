@@ -116,8 +116,9 @@ function singlePlayer() {
 	interval = setInterval(() => {
 		if (KEYMAP[87] || KEYMAP[38]) game_state.upSelf();
 		if (KEYMAP[83] || KEYMAP[40]) game_state.downSelf();
-		game_state.update();
-		game.update();
+		//update() now inside update_sound()
+		//game_state.update();
+		//game.update();
 		game_state.update_sound();
 		game.update_sound();
 		game_state.game.self.score = game.players[0].score;
