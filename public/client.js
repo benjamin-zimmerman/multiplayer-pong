@@ -118,10 +118,10 @@ function singlePlayer() {
 		if (KEYMAP[83] || KEYMAP[40]) game_state.downSelf();
 		//update() now inside update_sound()
 		//game_state.update();
-		//game.update();
+		game.update();
 		game_state.update();
-		game.update_sound();
-		game_state.update_sound();
+		//game.update_sound();
+		//game_state.update_sound();
 		game_state.game.self.score = game.players[0].score;
 		game.players[0].pos = game_state.game.self.pos
 		game_state.game.opp.score = game.players[1].score;
@@ -130,7 +130,23 @@ function singlePlayer() {
 		if (game_state.game.opp.pos < game_state.game.ball[1]) game_state.game.opp.pos += 0.65;
 		if (game_state.game.opp.pos > game_state.game.ball[1]) game_state.game.opp.pos -= 0.65;
 	}, (1 / 60) * 1000);
-
+	
+		
+	if (
+		game.ball[1] < game.players[game.player2].pos + 10 &&
+		game.ball[1] + 2 > game.players[game.player2].pos - 10 &&
+		game.ball[0] > 94 &&
+		game.ball[0] < 98
+	) {game.audio1.play();
+	  } else if (
+		game.ball[1] < game.players[game.player1].pos + 10 &&
+		game.ball[1] + 2 > game.players[game.player1].pos - 10 &&
+		game.ball[0] < 6 &&
+		game.ball[0] > 2
+	    ) {game.audio1.play();
+		}
+	
+	
 	document.getElementById('match-making').remove();
 	document.getElementById('gameplay').style.display = 'flex';
 	fit_canvas();
