@@ -20,6 +20,11 @@ class Pong {
 		this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
 	}
 
+	
+	update_sound() {
+		this.game.update_sound();
+	}
+	
 	//Renders next frame onto canvas
 	update() {
 		this.clear();
