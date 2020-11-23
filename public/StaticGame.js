@@ -26,8 +26,10 @@ class Game {
 			this.ball[0] > 94 &&
 			this.ball[0] < 98
 		) {play_boing();
-		  }
-	else if (
+		  
+		  
+		  
+		  } else if (
 			this.ball[1] < this.players[this.player1].pos + 10 &&
 			this.ball[1] + 2 > this.players[this.player1].pos - 10 &&
 			this.ball[0] < 6 &&
