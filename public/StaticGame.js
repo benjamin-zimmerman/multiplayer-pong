@@ -15,9 +15,13 @@ class Game {
 	}
 
 	//Updates game_state and calculates ball position and velocity
+	
 	update() {
+		//First consider cases where nothing needs to change
 		this.ball[0] += this.ball_velocity[0];
 		this.ball[1] += this.ball_velocity[1];
+		
+		//Consider cases where a player scores
 		if (this.ball[0] >= 100) {
 			this.players[this.player1].score++;
 			this.reset(1);
@@ -35,6 +39,7 @@ class Game {
 		}
 
 		//Ugly conditionals, but eh not familiar with javascript syntactically and it works
+		//Consider cases when a player blocks with their paddle
 		if (
 			this.ball[1] < this.players[this.player2].pos + 10 &&
 			this.ball[1] + 2 > this.players[this.player2].pos - 10 &&
@@ -51,6 +56,7 @@ class Game {
 				MIN_SPEED
 			);
 			this.ball_velocity[1] = -normalizedRelativeIntersectionY;
+			//Add in sound
 		} else if (
 			this.ball[1] < this.players[this.player1].pos + 10 &&
 			this.ball[1] + 2 > this.players[this.player1].pos - 10 &&
@@ -67,6 +73,7 @@ class Game {
 				(MAX_SPEED - MIN_SPEED) +
 				MIN_SPEED;
 			this.ball_velocity[1] = -normalizedRelativeIntersectionY;
+			//Add in sound
 		}
 	}
 
