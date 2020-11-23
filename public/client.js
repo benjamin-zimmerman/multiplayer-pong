@@ -121,6 +121,7 @@ function singlePlayer() {
 		//game.update();
 		game_state.update();
 		game.update_sound();
+		game_state.update_sound();
 		game_state.game.self.score = game.players[0].score;
 		game.players[0].pos = game_state.game.self.pos
 		game_state.game.opp.score = game.players[1].score;
