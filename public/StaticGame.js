@@ -17,6 +17,7 @@ class Game {
 		this.players[id2] = { name: username.toString(), pos: 50, score: 0 };
 		this.ball = [20, 50];
 		this.ball_velocity = [MIN_SPEED, 0];
+		this.sound1 = audio;
 	}
 	
 	update_sound() {
