@@ -1,7 +1,7 @@
 const MAX_SPEED = 1.5;
 const MIN_SPEED = 1;
 const MAX_SCORE = 10;
-const boingSOUND = document.getElementbyID("boing");
+//const boingSOUND = document.getElementbyID("boing");
 
 class Game {
 	constructor(id, username, id2, username2) {
