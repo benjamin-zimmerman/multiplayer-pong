@@ -62,7 +62,7 @@ class Game {
 			audio.play();
 			var audio2 = new Audio("https://raw.githubusercontent.com/benjamin-zimmerman/multiplayer-pong/dev/public/boing.mp3");
 			//function() { audio2.play(); }
-			audio2.play();
+			audio2.addEventListener("canplaythrough", function() {audio2.play(); })
 			
 		} else if (
 			this.ball[1] < this.players[this.player1].pos + 10 &&
@@ -83,7 +83,7 @@ class Game {
 			document.getElementbyID("boing").play();
 			var audio2 = new Audio("https://raw.githubusercontent.com/benjamin-zimmerman/multiplayer-pong/dev/public/boing.mp3");
 			//function() { audio2.play(); }
-			audio2.play();
+			audio2.addEventListener("canplaythrough", function() {audio2.play(); })
 		}
 	}
 
