@@ -44,9 +44,9 @@ class Game {
 		} else if (this.ball[1] <= 0) {
 			this.ball_velocity[1] *= -1;
 			this.ball[1] = 1;
-			this.sound2.pause();
-			this.sound2.currentTime = 0;
-			this.sound2.play();
+		  //this.sound2.pause();
+			//this.sound2.currentTime = 0;
+			//this.sound2.play();
 
 		}
 
