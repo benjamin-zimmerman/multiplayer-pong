@@ -27,12 +27,13 @@ class Game {
 		if (this.ball[0] >= 100) {
 			this.players[this.player1].score++;
 			this.reset(1);
-			this.sound2.pause();
-			this.sound2.currentTime = 0;
-			this.sound2.play();
+
 		} else if (this.ball[0] <= 0) {
 			this.players[this.player2].score++;
 			this.reset(2);
+			this.sound2.pause();
+			this.sound2.currentTime = 0;
+			this.sound2.play();
 		}
 
 		if (this.ball[1] >= 100) {
@@ -59,10 +60,11 @@ class Game {
 					(MAX_SPEED - MIN_SPEED) +
 				MIN_SPEED
 			);
+			this.ball_velocity[1] = -normalizedRelativeIntersectionY;
 			this.sound1.pause();
 			this.sound1.currentTime = 0;
 			this.sound1.play();
-			this.ball_velocity[1] = -normalizedRelativeIntersectionY;
+			
 
 		} else if (
 			this.ball[1] < this.players[this.player1].pos + 10 &&
@@ -79,10 +81,11 @@ class Game {
 				(1 - Math.abs(normalizedRelativeIntersectionY)) *
 					(MAX_SPEED - MIN_SPEED) +
 				MIN_SPEED;
+			this.ball_velocity[1] = -normalizedRelativeIntersectionY;
 			this.sound1.pause();
 			this.sound1.currentTime = 0;
 			this.sound1.play();
-			this.ball_velocity[1] = -normalizedRelativeIntersectionY;
+			
 		}
 	}
 
