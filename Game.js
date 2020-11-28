@@ -2,8 +2,8 @@ const uuid = require('uuid');
 const MAX_SPEED = 5;
 const MIN_SPEED = 2;
 const MAX_SCORE = 10;
-var audio_boing = new Audio("https://raw.githubusercontent.com/benjamin-zimmerman/multiplayer-pong/dev/public/boing.mp3");
-var audio_ahh = new Audio("https://raw.githubusercontent.com/benjamin-zimmerman/multiplayer-pong/dev/public/ahhh.mp3");
+//var audio_boing = new Audio("https://raw.githubusercontent.com/benjamin-zimmerman/multiplayer-pong/dev/public/boing.mp3");
+//var audio_ahh = new Audio("https://raw.githubusercontent.com/benjamin-zimmerman/multiplayer-pong/dev/public/ahhh.mp3");
 
 class Game {
 	constructor(id, username, id2, username2) {
