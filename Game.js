@@ -20,6 +20,7 @@ class Game {
 		this.sound4 = audioPlayer.play('./ahhh.mp3', (err) => {
     			if (err) console.log(`Could not play sound: ${err}`);
 		});
+	}
 
 	//Updates game_state and calculates ball position and velocity
 	update() {
