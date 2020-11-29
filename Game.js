@@ -16,8 +16,8 @@ class Game {
 		this.players[id2] = { name: username.toString(), pos: 50, score: 0 };
 		this.ball = [20, 50];
 		this.ball_velocity = [MIN_SPEED, 0];
-		this.sound3 = audio_boing_mult;
-		this.sound4 = audio_ahh_mult;
+		//this.sound3 = audio_boing_mult;
+		//this.sound4 = audio_ahh_mult;
 	}
 
 	//Updates game_state and calculates ball position and velocity
@@ -61,9 +61,9 @@ class Game {
 				MIN_SPEED
 			);
 			this.ball_velocity[1] = -normalizedRelativeIntersectionY;
-			this.sound3.pause();
-			this.sound3.currentTime = 0;
-			this.sound3.play();
+			//this.sound3.pause();
+			//this.sound3.currentTime = 0;
+			//this.sound3.play();
 			
 
 		} else if (
@@ -82,9 +82,9 @@ class Game {
 					(MAX_SPEED - MIN_SPEED) +
 				MIN_SPEED;
 			this.ball_velocity[1] = -normalizedRelativeIntersectionY;
-			this.sound3.pause();
-			this.sound3.currentTime = 0;
-			this.sound3.play();
+			//this.sound3.pause();
+			//this.sound3.currentTime = 0;
+			//this.sound3.play();
 			
 		}
 	}
