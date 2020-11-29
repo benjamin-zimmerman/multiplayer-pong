@@ -35,6 +35,8 @@ class Game {
 		} else if (this.ball[0] <= 0) {
 			this.players[this.player2].score++;
 			this.reset(2);
+			this.sound4.pause();
+			this.sound4.seek(0);
 			this.sound4.play();
 			//this.sound4.pause();
 			//this.sound4.currentTime = 0;
