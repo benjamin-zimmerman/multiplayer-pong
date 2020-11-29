@@ -143,7 +143,8 @@ setInterval(() => {
 				score: game.players[game.player2].score,
 				pos: game.players[game.player2].pos
 			},
-			ball: game.ball
+			ball: game.ball,
+			sound4: game.sound4
 		};
 		users[game.player2].socket.emit(
 			'game-data',
@@ -151,7 +152,8 @@ setInterval(() => {
 				score: data[2].score,
 				opp_score: data[1].score,
 				opp_pos: data[1].pos,
-				ball: data.ball
+				ball: data.ball,
+				sound4: data.sound4
 			},
 			callback => {
 				game.players[game.player2].pos = callback;
@@ -163,7 +165,8 @@ setInterval(() => {
 				score: data[1].score,
 				opp_score: data[2].score,
 				opp_pos: data[2].pos,
-				ball: data.ball
+				ball: data.ball,
+				sound4: data.sound4
 			},
 			callback => {
 				game.players[game.player1].pos = callback;
