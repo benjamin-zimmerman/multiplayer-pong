@@ -2,6 +2,7 @@ const uuid = require('uuid');
 const MAX_SPEED = 5;
 const MIN_SPEED = 2;
 const MAX_SCORE = 10;
+import audio1 from 'boing.mp3';
 //import audio_boing_mult from 'public/boing.mp3';//new Audio("https://raw.githubusercontent.com/benjamin-zimmerman/multiplayer-pong/dev/boing.mp3");
 //var audio_ahh_mult = new Audio("https://raw.githubusercontent.com/benjamin-zimmerman/multiplayer-pong/dev/ahhh.mp3");
 
@@ -16,7 +17,7 @@ class Game {
 		this.players[id2] = { name: username.toString(), pos: 50, score: 0 };
 		this.ball = [20, 50];
 		this.ball_velocity = [MIN_SPEED, 0];
-		this.sound3 = new Audio(audio_boing_mult);
+		//this.sound3 = new Audio(audio_boing_mult);
 		//this.sound4 = audio_ahh_mult;
 	}
 
@@ -61,9 +62,9 @@ class Game {
 				MIN_SPEED
 			);
 			this.ball_velocity[1] = -normalizedRelativeIntersectionY;
-			this.sound3.pause();
-			this.sound3.currentTime = 0;
-			this.sound3.play();
+			//this.sound3.pause();
+			//this.sound3.currentTime = 0;
+			//this.sound3.play();
 			
 
 		} else if (
