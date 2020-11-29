@@ -1,7 +1,6 @@
 var express = require('express');
 var Game = require('./Game');
 var app = express();
-var ms = require('mediaserver');
 const HERTZ = 30; //Game updates per second
 const port = process.env.PORT || 80;
 var server = require('http')
@@ -14,11 +13,6 @@ app.use(express.static(__dirname + '/node_modules'));
 app.use(express.static(__dirname + '/public'));
 app.get('/', function(req, res, next) {
 	res.sendFile(__dirname + '/public/index.html');
-}
-// New - add mediaserver	
-app.get('/boing.mp3', function(req, res){
-	ms.pipe(req, res, "/music.mp3")
-}
 });
 
 //User class
