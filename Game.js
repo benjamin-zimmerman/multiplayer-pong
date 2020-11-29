@@ -21,7 +21,7 @@ class Game {
 		this.ball_velocity = [MIN_SPEED, 0];
 		//this.sound3 = new Audio(audio_boing_mult);
 		this.sound4 = sound4; 
-		});
+		
 	}
 
 	//Updates game_state and calculates ball position and velocity
