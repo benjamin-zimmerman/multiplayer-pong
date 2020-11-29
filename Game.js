@@ -17,7 +17,7 @@ class Game {
 		this.ball = [20, 50];
 		this.ball_velocity = [MIN_SPEED, 0];
 		//this.sound3 = new Audio(audio_boing_mult);
-		this.sound4 = audioPlayer.play('./ahhh.mp3', (err) => {
+		this.sound4 = audioPlayer.play('./ahhh.mp3', {timeout: 1000}, (err) => {
     			if (err) console.log(`Could not play sound: ${err}`);
 		});
 	}
