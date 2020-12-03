@@ -158,7 +158,7 @@ setInterval(() => {
 			callback => {
 				game.players[game.player2].pos = callback;
 			},
-			'play-audio', { audio: data.sound}
+			//'play-audio', { audio: data.sound}
 		);
 		users[game.player1].socket.emit(
 			'game-data',
@@ -172,7 +172,7 @@ setInterval(() => {
 			callback => {
 				game.players[game.player1].pos = callback;
 			},
-			'play-audio', { audio: data.sound}
+			//'play-audio', { audio: data.sound}
 		);
 	}
 }, (1 / HERTZ) * 1000);
