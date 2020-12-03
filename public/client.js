@@ -55,12 +55,12 @@ socket.on('game-data', (data, callback) => {
 
 
 //Gets new sound data and mutates soundstate
-socket.on('play-audio', function (data) {
-	var audio = new Audio(data);
-	audio.pause();
-	audio.currentTime=0
-	audio.play();
-});
+//socket.on('play-audio', function (data) {
+//	var audio = new Audio(data);
+//	audio.pause();
+//	audio.currentTime=0
+//	audio.play();
+//});
 
 //Makes matchmaking div visible
 socket.on('matchmaking-begin', () => {
