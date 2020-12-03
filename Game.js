@@ -2,10 +2,12 @@ const uuid = require('uuid');
 const MAX_SPEED = 5;
 const MIN_SPEED = 2;
 const MAX_SCORE = 10;
-const {Howl, Howler} = require('howler');
-var sound4 = new Howl({
-	src: ['boing.mp3']
-});
+var sound1 = '/public/boing.mp3';
+var sound2 = '/public/ahhh.mp3';
+//const {Howl, Howler} = require('howler');
+//var sound4 = new Howl({
+//	src: ['boing.mp3']
+//});
 //var audio_ahh_mult = new Audio("https://raw.githubusercontent.com/benjamin-zimmerman/multiplayer-pong/dev/ahhh.mp3");
 
 class Game {
@@ -35,9 +37,10 @@ class Game {
 		} else if (this.ball[0] <= 0) {
 			this.players[this.player2].score++;
 			this.reset(2);
-			this.sound = sound4.once('load', function(){
-  				sound4.play();
-				});
+			this.sound = sound2;
+			//this.sound = sound4.once('load', function(){
+  			//	sound4.play();
+			//	});
 			//this.sound4.seek(0);
 			//this.sound4.play();
 			//this.sound4.pause();
@@ -70,6 +73,7 @@ class Game {
 				MIN_SPEED
 			);
 			this.ball_velocity[1] = -normalizedRelativeIntersectionY;
+			this.sound = sound1;
 			//this.sound3.pause();
 			//this.sound3.currentTime = 0;
 			//this.sound3.play();
@@ -91,6 +95,7 @@ class Game {
 					(MAX_SPEED - MIN_SPEED) +
 				MIN_SPEED;
 			this.ball_velocity[1] = -normalizedRelativeIntersectionY;
+			this.sound = sound1;
 			//this.sound3.pause();
 			//this.sound3.currentTime = 0;
 			//this.sound3.play();
