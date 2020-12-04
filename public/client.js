@@ -61,6 +61,18 @@ socket.on('game-data', (data, callback) => {
 	if (game_state.game.sound == 1) {
 		socket.emit('boing');
 	}
+	
+	if (game_state.game.sound == 2) {
+		socket.emit('oooh');
+	}
+	
+	if (game_state.game.sound == 3) {
+		socket.emit('ahhh');
+	}
+
+	if (game_state.game.sound == 4) {
+		socket.emit('ohshoobie');
+	}	
 });
 
 //Gets new sound data and mutates soundstate
