@@ -124,12 +124,14 @@ function matchMaker(new_player) {
 			username: users[matchmaking[0]].username,
 			player: 1,
 			opp_username: users[new_player].username,
-			ball: game.ball
+			ball: game.ball,
+			sound: game.sound
 		});
 		users[new_player].socket.emit('game-started', {
 			username: users[new_player].username,
 			player: 2,
-			opp_username: users[matchmaking[0]].username
+			opp_username: users[matchmaking[0]].username,
+			sound: game.sound
 		});
 		console.log(`Game ${game.id} has started.`);
 		matchmaking = [];
