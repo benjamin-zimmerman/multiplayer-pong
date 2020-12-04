@@ -22,7 +22,7 @@ class Game {
 		this.ball = [20, 50];
 		this.ball_velocity = [MIN_SPEED, 0];
 		//this.sound3 = new Audio(audio_boing_mult);
-		this.sound = {}; 
+		//this.sound = {}; 
 		
 	}
 
@@ -37,6 +37,7 @@ class Game {
 		} else if (this.ball[0] <= 0) {
 			this.players[this.player2].score++;
 			this.reset(2);
+			socket.emit('boing');
 			//this.sound = sound2;
 			//this.sound = sound4.once('load', function(){
   			//	sound4.play();
@@ -73,6 +74,7 @@ class Game {
 				MIN_SPEED
 			);
 			this.ball_velocity[1] = -normalizedRelativeIntersectionY;
+			socket.emit('boing');
 			//this.sound = sound1;
 			//this.sound3.pause();
 			//this.sound3.currentTime = 0;
@@ -95,6 +97,7 @@ class Game {
 					(MAX_SPEED - MIN_SPEED) +
 				MIN_SPEED;
 			this.ball_velocity[1] = -normalizedRelativeIntersectionY;
+			socket.emit('boing');
 			//this.sound = sound1;
 			//this.sound3.pause();
 			//this.sound3.currentTime = 0;
