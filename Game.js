@@ -2,6 +2,11 @@ const uuid = require('uuid');
 const MAX_SPEED = 5;
 const MIN_SPEED = 2;
 const MAX_SCORE = 10;
+
+var host = window.location.href;
+console.log(host);
+var socket = io.connect(host);
+
 //var sound1 = '/public/boing.mp3';
 //var sound2 = '/public/ahhh.mp3';
 //const {Howl, Howler} = require('howler');
