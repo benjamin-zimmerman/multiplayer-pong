@@ -3,18 +3,6 @@ const MAX_SPEED = 5;
 const MIN_SPEED = 2;
 const MAX_SCORE = 10;
 
-//var host = window.location.href;
-//console.log(host);
-//var socket = io.connect(host);
-
-//var sound1 = '/public/boing.mp3';
-//var sound2 = '/public/ahhh.mp3';
-//const {Howl, Howler} = require('howler');
-//var sound4 = new Howl({
-//	src: ['boing.mp3']
-//});
-//var audio_ahh_mult = new Audio("https://raw.githubusercontent.com/benjamin-zimmerman/multiplayer-pong/dev/ahhh.mp3");
-
 class Game {
 	constructor(id, username, id2, username2) {
 		this.ball_vel = 0.5;
@@ -40,21 +28,13 @@ class Game {
 		if (this.ball[0] >= 100) {
 			this.players[this.player1].score++;
 			this.reset(1);
+			this.sound = 3;
 
 		} else if (this.ball[0] <= 0) {
 			this.players[this.player2].score++;
 			this.reset(2);
-			this.sound = 1;
-			//socket.emit('boing');
-			//this.sound = sound2;
-			//this.sound = sound4.once('load', function(){
-  			//	sound4.play();
-			//	});
-			//this.sound4.seek(0);
-			//this.sound4.play();
-			//this.sound4.pause();
-			//this.sound4.currentTime = 0;
-			//this.sound4.play();
+			this.sound = 4;
+
 		}
 
 		if (this.ball[1] >= 100) {
@@ -82,11 +62,8 @@ class Game {
 				MIN_SPEED
 			);
 			this.ball_velocity[1] = -normalizedRelativeIntersectionY;
-			//socket.emit('boing');
 			this.sound = 1;
-			//this.sound3.pause();
-			//this.sound3.currentTime = 0;
-			//this.sound3.play();
+
 			
 
 		} else if (
@@ -106,10 +83,8 @@ class Game {
 				MIN_SPEED;
 			this.ball_velocity[1] = -normalizedRelativeIntersectionY;
 			//socket.emit('boing');
-			this.sound = 1;
-			//this.sound3.pause();
-			//this.sound3.currentTime = 0;
-			//this.sound3.play();
+			this.sound = 2;
+
 			
 		}
 	}
