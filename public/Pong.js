@@ -1,6 +1,6 @@
 class Pong {
 	//Initialises canvas
-	constructor(username, player, opp_username, ball, status) {
+	constructor(username, player, opp_username, ball, sound, status) {
 		//$('body').css({ overflow: 'hidden', position: 'fixed' });
 		this.canvas = document.getElementById('drawing-canvas');
 		this.ctx = document.getElementById('drawing-canvas').getContext('2d');
@@ -9,6 +9,7 @@ class Pong {
 			self: { username: username, score: 0, pos: 50 },
 			opp: { username: opp_username, score: 0, pos: 50 },
 			ball: ball
+			sound: sound
 		};
 		this.player_velocity = 3;
 	}
