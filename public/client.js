@@ -57,8 +57,8 @@ socket.on('game-data', (data, callback) => {
 var sound = new Audio('boing.mp3');
 
 socket.on('play-audio', function() {
-	sound.pause();
-	sound.currentTime=0;
+	//sound.pause();
+	//sound.currentTime=0;
 	sound.play();
 });
 
