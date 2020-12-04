@@ -71,9 +71,9 @@ socket.on('play-audio', function() {
 //	audio.play();
 //});
 
-if (game.sound=1) {
-	socket.emit('boing');
-}
+//if (game.sound=1) {
+//	socket.emit('boing');
+//}
 
 
 //Makes matchmaking div visible
