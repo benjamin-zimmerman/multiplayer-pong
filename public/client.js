@@ -54,6 +54,15 @@ socket.on('game-data', (data, callback) => {
 });
 
 //Gets new sound data and mutates soundstate
+var sound = new Audio('boing.mp3');
+
+socket.on('play-audio', function() {
+	sound.pause();
+	sound.currentTime=0;
+	sound.play();
+});
+
+
 //socket.on('play-audio', function (data) {
 //	var audio = new Audio(data);
 //	audio.pause();
