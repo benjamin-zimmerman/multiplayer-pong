@@ -73,6 +73,26 @@ io.on('connection', socket => {
 		});
 	});
 	
+	io.on('connection',function(socket){
+		socket.on('oooh',function(){
+			console.log('oooh');
+			io.emit('play-audio2');
+		});
+	});
+	
+	io.on('connection',function(socket){
+		socket.on('ahhh',function(){
+			console.log('ahhh');
+			io.emit('play-audio3');
+		});
+	});
+	
+	io.on('connection',function(socket){
+		socket.on('ohshoobie',function(){
+			console.log('ohshoobie');
+			io.emit('play-audio4');
+		});
+	});
 	
 	
 	socket.on('get-ping', callback => {
