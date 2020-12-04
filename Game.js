@@ -3,9 +3,9 @@ const MAX_SPEED = 5;
 const MIN_SPEED = 2;
 const MAX_SCORE = 10;
 
-var host = window.location.href;
-console.log(host);
-var socket = io.connect(host);
+//var host = window.location.href;
+//console.log(host);
+//var socket = io.connect(host);
 
 //var sound1 = '/public/boing.mp3';
 //var sound2 = '/public/ahhh.mp3';
@@ -27,7 +27,7 @@ class Game {
 		this.ball = [20, 50];
 		this.ball_velocity = [MIN_SPEED, 0];
 		//this.sound3 = new Audio(audio_boing_mult);
-		//this.sound = {}; 
+		this.sound = {}; 
 		
 	}
 
@@ -42,7 +42,8 @@ class Game {
 		} else if (this.ball[0] <= 0) {
 			this.players[this.player2].score++;
 			this.reset(2);
-			socket.emit('boing');
+			this.sound = 1;
+			//socket.emit('boing');
 			//this.sound = sound2;
 			//this.sound = sound4.once('load', function(){
   			//	sound4.play();
@@ -79,8 +80,8 @@ class Game {
 				MIN_SPEED
 			);
 			this.ball_velocity[1] = -normalizedRelativeIntersectionY;
-			socket.emit('boing');
-			//this.sound = sound1;
+			//socket.emit('boing');
+			this.sound = 1;
 			//this.sound3.pause();
 			//this.sound3.currentTime = 0;
 			//this.sound3.play();
@@ -102,8 +103,8 @@ class Game {
 					(MAX_SPEED - MIN_SPEED) +
 				MIN_SPEED;
 			this.ball_velocity[1] = -normalizedRelativeIntersectionY;
-			socket.emit('boing');
-			//this.sound = sound1;
+			//socket.emit('boing');
+			this.sound = 1;
 			//this.sound3.pause();
 			//this.sound3.currentTime = 0;
 			//this.sound3.play();
