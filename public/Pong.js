@@ -8,7 +8,7 @@ class Pong {
 			player: player,
 			self: { username: username, score: 0, pos: 50 },
 			opp: { username: opp_username, score: 0, pos: 50 },
-			ball: ball
+			ball: ball,
 			sound: sound
 		};
 		this.player_velocity = 3;
