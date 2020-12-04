@@ -1,6 +1,10 @@
 var host = window.location.href;
 console.log(host);
 var socket = io.connect(host);
+var sound = new Audio('boing.mp3');
+var oooh = new Audio('Oooohh.mp3');
+var ahhh = new Audio('ahhh.mp3');
+var ohshoobie = new Audio('OhShoobie.mp3');
 
 let game_state;
 
@@ -60,7 +64,7 @@ socket.on('game-data', (data, callback) => {
 });
 
 //Gets new sound data and mutates soundstate
-var sound = new Audio('boing.mp3');
+
 
 
 socket.on('play-audio', function() {
@@ -69,17 +73,24 @@ socket.on('play-audio', function() {
 	sound.play();
 });
 
+socket.on('play-audio2', function() {
+	//sound.pause();
+	//sound.currentTime=0;
+	oooh.play();
+});
 
-//socket.on('play-audio', function (data) {
-//	var audio = new Audio(data);
-//	audio.pause();
-//	audio.currentTime=0
-//	audio.play();
-//});
+socket.on('play-audio3', function() {
+	//sound.pause();
+	//sound.currentTime=0;
+	ahhh.play();
+});
 
-//if (game.sound=1) {
-//	socket.emit('boing');
-//}
+socket.on('play-audio4', function() {
+	//sound.pause();
+	//sound.currentTime=0;
+	ohshoobie.play();
+});
+
 
 
 //Makes matchmaking div visible
