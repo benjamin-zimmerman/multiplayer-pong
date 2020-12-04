@@ -35,6 +35,8 @@ class Game {
 	update() {
 		this.ball[0] += this.ball_velocity[0];
 		this.ball[1] += this.ball_velocity[1];
+		this.sound = 0;
+		
 		if (this.ball[0] >= 100) {
 			this.players[this.player1].score++;
 			this.reset(1);
