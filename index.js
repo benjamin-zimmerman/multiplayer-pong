@@ -65,6 +65,16 @@ io.on('connection', socket => {
 		}
 	});
 
+	
+	io.on('connection',function(socket){
+		socket.on('boing',function(){
+			console.log('boing');
+			io.emit('play-audio');
+		});
+	});
+	
+	
+	
 	socket.on('get-ping', callback => {
 		callback(true);
 	});
