@@ -34,7 +34,8 @@ socket.on('game-started', data => {
 		data.username,
 		data.player,
 		data.opp_username,
-		data.ball
+		data.ball,
+		data.sound
 	);
 	interval = setInterval(() => {
 		game_state.update();
@@ -50,7 +51,12 @@ socket.on('game-data', (data, callback) => {
 	game_state.game.opp.score = data.opp_score;
 	game_state.game.ball = data.ball;
 	game_state.game.opp.pos = data.opp_pos;
+	game_state.game.sound = data.sound;
 	callback(game_state.game.self.pos);
+	
+	if (game_state.game.sound == 1) {
+		socket.emit('boing');
+	}
 });
 
 //Gets new sound data and mutates soundstate
