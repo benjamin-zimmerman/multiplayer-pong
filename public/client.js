@@ -71,7 +71,7 @@ socket.on('play-audio', function() {
 //	audio.play();
 //});
 
-if (game_state.game.sound=1) {
+if (game.sound=1) {
 	socket.emit('boing');
 }
 
