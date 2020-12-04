@@ -56,6 +56,7 @@ socket.on('game-data', (data, callback) => {
 //Gets new sound data and mutates soundstate
 var sound = new Audio('boing.mp3');
 
+
 socket.on('play-audio', function() {
 	//sound.pause();
 	//sound.currentTime=0;
@@ -69,6 +70,11 @@ socket.on('play-audio', function() {
 //	audio.currentTime=0
 //	audio.play();
 //});
+
+if (game_state.game.sound=1) {
+	socket.emit('boing');
+}
+
 
 //Makes matchmaking div visible
 socket.on('matchmaking-begin', () => {
