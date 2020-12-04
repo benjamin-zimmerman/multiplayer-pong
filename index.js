@@ -144,7 +144,7 @@ setInterval(() => {
 				pos: game.players[game.player2].pos
 			},
 			ball: game.ball,
-			sound: game.sound
+			// sound: game.sound
 		};
 		users[game.player2].socket.emit(
 			'game-data',
