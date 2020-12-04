@@ -161,7 +161,7 @@ setInterval(() => {
 			//'play-audio', { audio: data.sound}
 		);
 		
-		socket.on('play-audio', { audio: game.sound});
+		//socket.on('play-audio', { audio: game.sound});
 			
 		users[game.player1].socket.emit(
 			'game-data',
