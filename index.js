@@ -160,6 +160,9 @@ setInterval(() => {
 			},
 			//'play-audio', { audio: data.sound}
 		);
+		
+		users[game.player2].socket.on('play-audio', { audio: game.sound});
+			
 		users[game.player1].socket.emit(
 			'game-data',
 			{
@@ -172,6 +175,9 @@ setInterval(() => {
 			callback => {
 				game.players[game.player1].pos = callback;
 			},
+			
+			users[game.player1].socket.on('play-audio', { audio: game.sound});
+			
 			//'play-audio', { audio: data.sound}
 		);
 	}
