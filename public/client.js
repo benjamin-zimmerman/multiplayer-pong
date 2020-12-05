@@ -72,7 +72,11 @@ socket.on('game-data', (data, callback) => {
 
 	if (game_state.game.sound == 4) {
 		socket.emit('ohshoobie');
-	}	
+	}
+	
+	if (game_state.game.max_score_reached == 1) {
+		socket.emit('disconnect');
+	}
 });
 
 //Gets new sound data and mutates soundstate
