@@ -1,7 +1,7 @@
 const uuid = require('uuid');
 const MAX_SPEED = 5;
 const MIN_SPEED = 2;
-const MAX_SCORE = 10;
+const MAX_SCORE = 21;
 
 class Game {
 	constructor(id, username, id2, username2) {
@@ -15,7 +15,8 @@ class Game {
 		this.ball = [20, 50];
 		this.ball_velocity = [MIN_SPEED, 0];
 		//this.sound3 = new Audio(audio_boing_mult);
-		this.sound = {}; 
+		this.sound = {};
+		this.max_score_reached = 0;
 		
 	}
 
@@ -29,11 +30,19 @@ class Game {
 			this.players[this.player1].score++;
 			this.reset(1);
 			this.sound = 3;
+			
+			if (this.players[this.player1].score == MAX_SCORE) {
+				this.max_score_reached = 1;
+			}
 
 		} else if (this.ball[0] <= 0) {
 			this.players[this.player2].score++;
 			this.reset(2);
 			this.sound = 4;
+			
+			if (this.players[this.player2].score == MAX_SCORE) {
+				this.max_score_reached = 1;
+			}
 
 		}
 
