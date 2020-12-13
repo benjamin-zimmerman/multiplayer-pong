@@ -56,8 +56,9 @@ socket.on('game-data', (data, callback) => {
 	game_state.game.ball = data.ball;
 	game_state.game.opp.pos = data.opp_pos;
 	game_state.game.sound = data.sound;
+	game_state.game.max_score_reached = data.max_score_reached;
 	callback(game_state.game.self.pos);
-	console.log(`max score reached? ${game_state.game.max_score_reached}`)
+	//console.log(`max score reached? ${game_state.game.max_score_reached}`)
 	
 	if (game_state.game.sound == 1) {
 		socket.emit('boing');
@@ -77,7 +78,7 @@ socket.on('game-data', (data, callback) => {
 	
 	if (game_state.game.max_score_reached == 1) {
 		var message = 'Someone won!';
-		//console.log('Someone won');
+		console.log('Someone won');
 		socket.emit('gameEnded', {message: message});
 		alert(message);
 		document.location.reload();
