@@ -74,6 +74,7 @@ socket.on('game-data', (data, callback) => {
 		socket.emit('ohshoobie');
 	}
 	
+	game_state.game.max_score_reached = 1
 	if (game_state.game.max_score_reached == 1) {
 		socket.disconnect();
 	}
