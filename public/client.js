@@ -75,7 +75,7 @@ socket.on('game-data', (data, callback) => {
 	}
 	
 	if (game_state.game.max_score_reached == 1) {
-		socket.emit('endgame');
+		socket.disconnect();
 	}
 });
 
