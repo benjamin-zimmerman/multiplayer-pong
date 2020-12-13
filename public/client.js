@@ -91,6 +91,7 @@ socket.on('gameEnd', function(data){
 	console.log('Game end on client side');
 	alert(message);
 	document.location.reload();
+	socket.disconnect();
 });
 	
 
