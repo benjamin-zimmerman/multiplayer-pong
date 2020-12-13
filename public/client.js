@@ -87,7 +87,7 @@ socket.on('game-data', (data, callback) => {
 //Gets new sound data and mutates soundstate
 
 socket.on('gameEnd', function(data){
-	console.log('Game end on client side');
+	//console.log('Game end on client side');
 	alert(message);
 	document.location.reload();
 });
