@@ -76,13 +76,20 @@ socket.on('game-data', (data, callback) => {
 	
 	game_state.game.max_score_reached = 1
 	if (game_state.game.max_score_reached == 1) {
-		socket.emit('endgame';
+		var message = 'Someone won!';
+		socket.emit('gameEnded', {message: message});
+		alert(message);
+		location.reload();
 	}
 });
 
 //Gets new sound data and mutates soundstate
 
-
+socket.on('gameEnd', function(data){
+	alert(message);
+	location.reload();
+}
+	
 
 socket.on('play-audio', function() {
 	//sound.pause();
