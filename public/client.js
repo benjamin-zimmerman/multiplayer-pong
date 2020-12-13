@@ -84,10 +84,10 @@ socket.on('game-data', (data, callback) => {
 
 //Gets new sound data and mutates soundstate
 
-//socket.on('gameEnd', function(data){
-//	alert(message);
+socket.on('gameEnd', function(data){
+	alert(message);
 //	location.reload();
-//}
+}
 	
 
 socket.on('play-audio', function() {
