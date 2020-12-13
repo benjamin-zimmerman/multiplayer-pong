@@ -119,6 +119,10 @@ io.on('connection', socket => {
 			}
 		}
 	});
+	
+	socket.on('gameEnded', function(data){
+		socket.broadcast.emit('gameEnd', data);
+	});
 });
 
 //Very simple matchmaking, as soon as theres two people in queue it matches them together
