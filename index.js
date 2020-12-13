@@ -122,7 +122,7 @@ io.on('connection', socket => {
 	
 	socket.on('gameEnded', function(data){
 		socket.broadcast.emit('gameEnd', data);
-		console.log('Game should end');
+		//console.log('Game should end');
 	});
 });
 
