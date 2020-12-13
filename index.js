@@ -171,6 +171,7 @@ setInterval(() => {
 		let game = games[key];
 
 		game.update();
+		console.log('TEST');
 		data = {
 			1: {
 				score: game.players[game.player1].score,
