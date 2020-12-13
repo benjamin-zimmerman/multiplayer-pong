@@ -57,6 +57,7 @@ socket.on('game-data', (data, callback) => {
 	game_state.game.opp.pos = data.opp_pos;
 	game_state.game.sound = data.sound;
 	callback(game_state.game.self.pos);
+	#console.log('max score reached?' game_state.game.max_score_reached)
 	
 	if (game_state.game.sound == 1) {
 		socket.emit('boing');
