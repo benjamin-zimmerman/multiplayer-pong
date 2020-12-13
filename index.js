@@ -171,7 +171,7 @@ setInterval(() => {
 		let game = games[key];
 
 		game.update();
-		console.log(${game.max_score_reached});
+		console.log(`${game.max_score_reached}`);
 		data = {
 			1: {
 				score: game.players[game.player1].score,
