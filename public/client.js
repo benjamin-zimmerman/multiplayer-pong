@@ -74,12 +74,12 @@ socket.on('game-data', (data, callback) => {
 		socket.emit('ohshoobie');
 	}
 	
-	if (game_state.game.max_score_reached == 1) {
-		var message = 'Someone won!';
-		socket.emit('gameEnded', {message: message});
-		alert(message);
-		location.reload();
-	}
+	//if (game_state.game.max_score_reached == 1) {
+	//	var message = 'Someone won!';
+	//	socket.emit('gameEnded', {message: message});
+	//	alert(message);
+	//	location.reload();
+	//}
 });
 
 //Gets new sound data and mutates soundstate
