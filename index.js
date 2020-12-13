@@ -123,6 +123,16 @@ io.on('connection', socket => {
 	socket.on('gameEnded', function(data){
 		socket.broadcast.emit('gameEnd', data);
 		//console.log('Game should end');
+		for (key in games) {
+			let game = games[key];
+			if (game.player1 == socket.id) {
+				users[game.player2].socket.emit('player-left');
+				delete games[key];
+			} else if (game.player2 == socket.id) {
+				users[game.player1].socket.emit('player-left');
+				delete games[key];
+			}
+		}
 	});
 });
 
