@@ -76,6 +76,7 @@ socket.on('game-data', (data, callback) => {
 	
 	if (game_state.game.max_score_reached == 1) {
 		var message = 'Someone won!';
+		console.log('Someone won');
 		socket.emit('gameEnded', {message: message});
 		alert(message);
 		document.location.reload();
@@ -85,6 +86,7 @@ socket.on('game-data', (data, callback) => {
 //Gets new sound data and mutates soundstate
 
 socket.on('gameEnd', function(data){
+	console.log('Game end on client side');
 	alert(message);
 	document.location.reload();
 });
