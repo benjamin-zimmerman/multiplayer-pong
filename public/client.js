@@ -90,6 +90,7 @@ socket.on('game-data', (data, callback) => {
 socket.on('gameEnd', function(data){
 	console.log('Game end on client side');
 	alert(message);
+	socket.disconnect();
 	document.location.reload();
 	
 });
